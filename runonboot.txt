@@ -1,0 +1,7 @@
+mv fastapi-location.service /etc/systemd/system/fastapi-location.service
+
+sudo systemctl daemon-reload
+sudo systemctl enable fastapi-location.service
+sudo systemctl start fastapi-location.service
+
+sudo systemctl status fastapi-location.service

@@ -1,0 +1,13 @@
+[Unit]
+Description=FastAPI Location App
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker run --rm -p 80:8000 vedangj044/fastapi-location-app:1.0
+ExecStop=/usr/bin/docker stop fastapi-location
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
